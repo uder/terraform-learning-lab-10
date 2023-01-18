@@ -1,0 +1,18 @@
+formatter: "markdown"
+
+recursive:
+    enabled: true
+    path: modules
+
+output:
+    file: "README.md"
+    mode: replace
+    template: |-
+        ## terraform-learning-lab-10
+        - Create 3 S3 buckets where 2d depends on 1st AND 3d depends on 2d and 1st.
+        - Remove the second bucket from Terraform configuration and state. So, the bucket still has to persist in the Cloud.
+        - Do terraform apply. Check terraform’s behavior. Remove left resources in AWS
+        <!-- BEGIN_TF_DOCS -->
+        {{ .Content }}
+        <!-- END_TF_DOCS --> 
+        
